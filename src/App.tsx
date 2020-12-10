@@ -1,11 +1,16 @@
 import React from "react";
 import "./styles.scss";
 import { HomeComponent } from "./components/HomeComponent";
+import { Navbar } from "./components/NavbarComponent";
 function App() {
   return (
-    <div className="container">
-      <HomeComponent></HomeComponent>
-    </div>
+    <>
+      <Navbar></Navbar>
+
+      <main>
+        <HomeComponent></HomeComponent>
+      </main>
+    </>
   );
 }
 
