@@ -1,13 +1,8 @@
 import React from "react";
-import { Footer } from "./FooterComponent";
-import { Header } from "./HeaderComponent";
-import { Skills } from "./SkillsComponent";
-import { Navbar } from "./NavbarComponent";
 export const HomeComponent = () => {
   return (
     <>
-      <Header></Header>
-      <Skills></Skills>
+      <h1 className="title">Angel Altuve</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
         purus vel augue facilisis blandit. In tristique dapibus elit, vel luctus
@@ -53,7 +48,6 @@ export const HomeComponent = () => {
         tempus quam, aliquet blandit lacus faucibus id. Nunc scelerisque nisi
         massa, ac vestibulum nisl varius eu.
       </p>
-      <Footer></Footer>
     </>
   );
 };

@@ -1,38 +1,143 @@
-$dark-bg: #322f3d;
-
+$darker-bg: #1f1f1f;
+$dark-bg: #282828;
+$primary: #98971a;
+$orange: #d65d0e;
+$gray: #928374;
 :root {
-  font-size: 16px;
+  font-size: 25px;
+  color: whitesmoke;
+  font-family: Rokkitt;
+}
+
+body {
+  * {
+    box-sizing: border-box;
+  }
 }
 
 .skills {
   font-size: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  h3 {
+    flex: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 0.9em;
+  }
 }
 
 main {
   margin-left: 5rem;
-  padding: 1rem;
+  padding: 2rem;
+  background-color: $dark-bg;
+  min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
-  width: 0.2rem;
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
-  background: green;
+  background: $gray;
 }
 
 body::-webkit-scrollbar-thumb {
-  background: purple;
+  background: $gray;
+  background: $orange;
 }
 
 .navbar {
-  width: 5rem;
+  width: 5.2rem;
   height: 100vh;
   position: fixed;
-  background-color: $dark-bg;
-  font-size: 2em;
-  color: green;
+  background-color: $darker-bg;
+  font-size: 1.7em;
+  transition: width 400ms ease;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    li {
+      position: relative;
+
+      a {
+        padding: 1.5rem;
+        color: $primary;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        filter: grayscale(100%);
+        transition: 300ms;
+        svg {
+          transition: opacity 0.5s ease-in-out;
+        }
+        &:hover {
+          svg {
+            opacity: 0.2;
+          }
+
+          .link-text {
+            opacity: 1;
+          }
+          filter: grayscale(0%);
+        }
+      }
+      &:last-child {
+        margin-top: auto;
+      }
+    }
+  }
 }
-.navbar > ul {
-  list-style: none;
+
+.link-text {
+  position: absolute;
+  text-align: center;
+  flex: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  text-shadow: 0 0 3px $primary;
+  font-size: 0.5em;
+  white-space: nowrap;
+}
+
+.pic {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 500px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: none;
+  }
+  main {
+    margin: 0;
+  }
+
+  .burger {
+    display: reverse;
+  }
+}
+
+.title {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.burger {
+  display: none;
 }
