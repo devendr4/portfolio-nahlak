@@ -23,41 +23,51 @@ import {
 export const Skills = () => {
   return (
     <div className="skills">
-      <section>
+      <div>
         <h3>Frontend Frameworks</h3>
-        <FaAngular />
-        <FaReact />
-        <FaBootstrap />
-      </section>
-      <section>
+        <section>
+          <FaAngular />
+          <FaReact />
+          <FaBootstrap />
+        </section>
+      </div>
+      <div>
         <h3>Languages</h3>
-        <FaPython />
-        <DiRuby />
-        <SiTypescript />
-        <SiJavascript />
-        <FaHtml5 />
-        <FaCss3Alt />
-        <FaSass />
-      </section>
-      <section>
+        <section>
+          <FaPython />
+          <DiRuby />
+          <SiTypescript />
+          <SiJavascript />
+          <FaHtml5 />
+          <FaCss3Alt />
+          <FaSass />
+        </section>
+      </div>
+      <div>
         <h3>Databases</h3>
-        <SiPostgresql />
-        <DiMysql />
-        <DiMongodb />
-        <SiOracle />
-      </section>
-      <section>
+        <section>
+          <SiPostgresql />
+          <DiMysql />
+          <DiMongodb />
+          <SiOracle />
+        </section>
+      </div>
+      <div>
         <h3>Backend Frameworks</h3>
-        <SiRails />
-        <SiFlask />
-        <FaNode />
-        <DiDjango />
-      </section>
-      <section>
+        <section>
+          <SiRails />
+          <SiFlask />
+          <FaNode />
+          <DiDjango />
+        </section>
+      </div>
+      <div>
         <h3>Business Intelligence</h3>
-        <SiTableau />
-        <SiPowerbi />
-      </section>
+        <section>
+          <SiTableau />
+          <SiPowerbi />
+        </section>
+      </div>
     </div>
   );
 };

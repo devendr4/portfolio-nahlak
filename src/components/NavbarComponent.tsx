@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import {
   FaEnvelope,
   FaHome,
@@ -9,18 +9,50 @@ import {
 import { BsPersonLinesFill } from "react-icons/bs";
 import { TiThMenu } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
+import "../component-styles/navbar-styles.scss";
 
-import "../styles.scss";
+export const useOutsideAlert = (
+  ref: React.RefObject<HTMLDivElement>,
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>
+) => {
+  useEffect(() => {
+    const handleClickOutside = (event: Event) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref, setOpen]);
+};
 
 export const Navbar = () => {
+  const [isOpen, setOpen] = useState(false);
+  const wrapperRef = useRef(null);
+  useOutsideAlert(wrapperRef, setOpen);
   return (
-    <>
-      <TiThMenu className="burger" />
-
-      <nav className="navbar">
+    <div ref={wrapperRef}>
+      <TiThMenu
+        className={"burger " + (!isOpen ? "burger" : "burger-closed")}
+        onClick={() => {
+          setOpen(!isOpen);
+          console.log(isOpen);
+        }}
+      />
+      <nav className={"navbar " + (isOpen ? "open" : "closed")}>
         <ul>
+          <li className="burger">
+            <TiThMenu
+              onClick={() => {
+                setOpen(!isOpen);
+                console.log(isOpen);
+              }}
+            />
+          </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="/" exact>
               <span className="link-text">Home</span>
               <FaHome />
             </NavLink>
@@ -50,14 +82,12 @@ export const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <a>
-              <span>
-                <FaMoon />
-              </span>
-            </a>
+            <span>
+              <FaMoon />
+            </span>
           </li>
         </ul>
       </nav>
-    </>
+    </div>
   );
 };
