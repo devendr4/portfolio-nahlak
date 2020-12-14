@@ -1,5 +1,10 @@
 import React from "react";
 
 export const Certifications = () => {
-  return <h1>c</h1>;
+  return (
+    <div>
+      <h2>Machine Learning</h2>
+      <h2>Front-end</h2>
+    </div>
+  );
 };

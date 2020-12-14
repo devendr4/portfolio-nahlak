@@ -2,7 +2,7 @@ import React from "react";
 export const HomeComponent = () => {
   return (
     <>
-      <h1 className="title">Angel Altuve</h1>
+      <h1 className="title">Angel G. Altuve Rodríguez</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
         purus vel augue facilisis blandit. In tristique dapibus elit, vel luctus
