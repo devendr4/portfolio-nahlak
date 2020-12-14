@@ -8,25 +8,20 @@ $gray: #928374;
 .skills {
   font-size: 2.2em;
   display: grid;
-  flex-wrap: wrap;
-  /*grid-template-columns: 1fr 1fr 1fr;*/
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  div {
-    /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
-    section {
-      p {
-        font-size: 0.5em;
-      }
-    }
-  }
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   h3 {
     margin: 0;
     grid-column: 1/-1;
     padding: 0;
     font-size: 0.7em;
+  }
+}
+
+.skill-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  p{
+    font-size:0.5em;
   }
 }
 
