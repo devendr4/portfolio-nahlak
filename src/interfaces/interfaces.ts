@@ -5,3 +5,10 @@ export interface Skill {
   knowledge: number;
   category: string;
 }
+export interface Certificate {
+  name?: string;
+  category?: string;
+  url?: string;
+  credential?: string;
+  organization?: string;
+}

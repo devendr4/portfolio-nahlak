@@ -5,7 +5,7 @@ $orange: #d65d0e;
 $gray: #928374;
 
 .navbar {
-  width: 5.2rem;
+  width: 5rem;
   height: 100vh;
   position: fixed;
   background-color: $darker-bg;
@@ -68,11 +68,13 @@ $gray: #928374;
 }
 
 .burger {
-  display: none;
-  margin-top: 1rem;
+  position: absolute;
   font-size: 1.5em;
-  margin-left: 1rem;
-  margin-bottom: -1rem;
+  opacity: 0;
+  width: 2rem;
+  top: 1rem;
+  left: 1.5rem;
+  z-index: 1;
 }
 
 @media screen and (max-width: 900px) {
@@ -119,11 +121,11 @@ $gray: #928374;
   }
 
   .burger {
-    display: inline-block;
+    opacity: 100;
   }
 
   .burger-closed {
-    display: none;
+    display: block;
   }
 
   .skills {

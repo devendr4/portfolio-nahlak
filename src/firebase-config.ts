@@ -1,3 +1,5 @@
+import firebase from "firebase/app";
+
 const firebaseConfig = {
   apiKey: "AIzaSyAc1tAlLVOy35DPJcvql0abI5FO-G-2XN4",
   authDomain: "devendr4.firebaseapp.com",
@@ -8,5 +10,5 @@ const firebaseConfig = {
   appId: "1:181897682852:web:b6cedd23bc04643f076b31",
 };
 
-export default firebaseConfig;
-
+export const fb = firebase.initializeApp(firebaseConfig);
+export const db = fb.firestore();

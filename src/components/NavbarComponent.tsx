@@ -43,14 +43,6 @@ export const Navbar = () => {
       />
       <nav className={"navbar " + (isOpen ? "open" : "closed")}>
         <ul>
-          <li className="burger">
-            <TiThMenu
-              onClick={() => {
-                setOpen(!isOpen);
-                console.log(isOpen);
-              }}
-            />
-          </li>
           <li>
             <NavLink to="/" exact>
               <span className="link-text">Home</span>
