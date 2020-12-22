@@ -1,9 +1,10 @@
 import React from "react";
+import { Title } from "../styled-components/styled-components";
 
 export const Contact = () => {
   return (
     <div>
-      <h1> Contact Me</h1>
+      <Title>Contact Me</Title>
       <form>
         <label>email</label>
         <input type="email" />

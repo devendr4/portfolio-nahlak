@@ -23,6 +23,9 @@ main {
   padding: 2rem;
   min-height: 100vh;
 }
+h1,h2,h3 {
+  color: $primary;
+}
 
 body::-webkit-scrollbar {
   width: 0.5rem;
@@ -38,8 +41,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .pic {
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 500px;
 }
 
@@ -65,4 +68,3 @@ input {
   background: none;
   height: 2rem;
 }
-

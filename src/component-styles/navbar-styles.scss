@@ -90,7 +90,10 @@ $gray: #928374;
 
   .navbar {
     font-size: 1.3em;
-    padding-top: 1rem;
+    padding-top: 2rem;
+    &:first-child {
+      padding-top: 2rem;
+    }
     .burger {
       position: relative;
       padding-top: 1rem;

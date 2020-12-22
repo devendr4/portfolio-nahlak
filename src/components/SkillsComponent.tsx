@@ -2,11 +2,11 @@ import React from "react";
 import "firebase/firestore";
 import { SkillList } from "./SkillListComponent";
 import "../component-styles/skills.scss";
-
+import { Title } from "../styled-components/styled-components";
 export const Skills = () => {
   return (
     <div className="skills">
-      <h1>Skill List</h1>
+      <Title>Skills</Title>
       <div>
         <h3>Languages</h3>
         <SkillList category="lang" />
