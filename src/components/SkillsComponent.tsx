@@ -31,8 +31,8 @@ export const Skills = () => {
 
       <SkillList category="lang" isActive={active === 0} />
       <SkillList category="frontend" isActive={active === 1} />
-      <SkillList category="database" isActive={active === 2} />
-      <SkillList category="backend" isActive={active === 3} />
+      <SkillList category="backend" isActive={active === 2} />
+      <SkillList category="database" isActive={active === 3} />
       <SkillList category="bi" isActive={active === 4} />
     </div>
   );

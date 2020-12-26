@@ -130,7 +130,7 @@ export const skillData: Skill[] = [
   {
     name: "Flask",
     icon: SiFlask,
-    knowledge: 80,
+    knowledge: 60,
     category: "backend",
   },
   {

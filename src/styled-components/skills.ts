@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { brightOrange, orange, gray, darkbg } from "./constants";
 
 type TabProps = {
@@ -14,11 +14,12 @@ export const TabGroup = styled.div`
 
 export const Tab = styled.div<TabProps>`
   cursor: pointer;
-  transition: 500ms;
+  transition: 800ms;
   background-color: ${(props) => (props.isActive ? orange : darkbg)};
   margin-bottom: 2rem;
   font-size: 1.5em;
   min-width: 6rem;
+  margin-left: 1rem;
   text-align: center;
   padding: 1rem;
   &:hover {
@@ -49,6 +50,24 @@ type ProgressBarProps = {
   width: string;
 };
 
+const ProgressAnimation = keyframes`
+  0%{
+    width: 0%
+  }
+  }
+  100%{
+    width:100%;
+  }
+`;
+
+const PercentageAnimation = keyframes`
+  0%,60%{
+    opacity:0
+  }
+  100%{
+    opacity:1
+  }
+`;
 export const ProgressBar = styled.div<ProgressBarProps>`
   display: flex;
   text-align: end;
@@ -58,7 +77,12 @@ export const ProgressBar = styled.div<ProgressBarProps>`
   align-items: center;
   background-color: ${orange};
   width: ${(props) => props.width};
-  transition: 200ms;
+  animation: ${ProgressAnimation} 1.5s ease-out;
+  &:before {
+    p {
+      display: none;
+    }
+  }
 `;
 
 export const FullBar = styled.div`
@@ -66,4 +90,11 @@ export const FullBar = styled.div`
   height: 0.5rem;
   background-color: ${gray};
   border-radius: 10rem;
+`;
+
+export const Knowledge = styled.p`
+  margin-bottom: 1.5rem !important;
+  padding-left: 1rem;
+  font-size: 0.7em;
+  animation: ${PercentageAnimation} 2s ease-in;
 `;

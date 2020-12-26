@@ -6,6 +6,7 @@ import {
   Circle,
   FullBar,
   SkillGroup,
+  Knowledge,
 } from "../styled-components/skills";
 
 type Props = {
@@ -23,8 +24,10 @@ export const SkillList = ({ category, isActive }: Props) => {
               <span key={i}>
                 <skill.icon />
                 <p>{skill.name}</p>
+
                 <FullBar>
                   <ProgressBar width={skill.knowledge + "%"}>
+                    <Knowledge>{skill.knowledge + "%"}</Knowledge>
                     <Circle />
                   </ProgressBar>
                 </FullBar>
