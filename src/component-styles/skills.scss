@@ -26,14 +26,3 @@ $gray: #928374;
   }
 }
 
-.skill-group {
-  display: grid;
-  /*grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));*/
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 1rem;
-  p {
-    font-size: 0.35em;
-    margin: 0;
-  }
-}
-
