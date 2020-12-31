@@ -1,7 +1,6 @@
 import React from "react";
 import "./styles.scss";
 import { HomeComponent } from "./components/HomeComponent";
-import { Skills } from "./components/SkillsComponent";
 import { Contact } from "./components/ContactComponent";
 import { Certifications } from "./components/CertificationsComponent";
 import { About } from "./components/AboutComponent";
@@ -15,9 +14,6 @@ function App() {
         <Switch>
           <Route path="/contact">
             <Contact />
-          </Route>
-          <Route path="/skills">
-            <Skills />
           </Route>
           <Route path="/certifications">
             <Certifications />
