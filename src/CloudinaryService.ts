@@ -12,7 +12,7 @@ export const openUploadWidget = (options: any, callback: any) => {
   window.cloudinary.openUploadWidget(scOptions, callback);
 };
 
-export async function fetchPhotos(imageTag: any, setter: any) {
+export async function fetchPhotos(imageTag: string, setter: any) {
   const options = {
     cloudName: "chichaswan",
     format: "json",
@@ -33,4 +33,3 @@ export async function fetchPhotos(imageTag: any, setter: any) {
     )
     .catch((err) => console.log(err));
 }
-

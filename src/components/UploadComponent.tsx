@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 const url = "http://res.cloudinary.com/chichaswan/image/upload/";
 export const UploadButton = () => {
-  const beginUpload = (tag: string) => {
+  const beginUpload = (tag: string[]) => {
     const uploadOptions = {
       cloudName: "chichaswan",
       tags: [tag],
@@ -16,7 +16,17 @@ export const UploadButton = () => {
       console.log(pic);
     });
   };
-  return <button onClick={() => beginUpload("test")}>upload</button>;
+  return (
+    <div>
+      <button onClick={() => beginUpload(["art", "logos"])}>logos</button>
+      <button onClick={() => beginUpload(["art", "ilustraciones"])}>
+        ilustraciones
+      </button>
+      <button onClick={() => beginUpload(["art", "productos"])}>
+        productos
+      </button>
+    </div>
+  );
 };
 
 const Tall = styled.div`
@@ -37,10 +47,9 @@ type ImgProps = {
 };
 
 export const Pics = () => {
-  console.log(`  ${url} + ${url}`);
   const [images, setImages] = useState<any[]>([]);
   useEffect(() => {
-    fetchPhotos("test", setImages);
+    fetchPhotos("art", setImages);
   }, []);
   return (
     <Grid>

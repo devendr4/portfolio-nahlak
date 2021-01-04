@@ -38,7 +38,7 @@ export const Navbar = () => {
       />
       <Nav>
         <ul>
-          <Title>Chicha Swan C.</Title>
+          <Title>NAHLAK</Title>
           <li>
             <NavLink to="/" exact>
               <FaHome />
