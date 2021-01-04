@@ -5,37 +5,7 @@ $orange: #d65d0e;
 $bright-orange: #fe8019;
 $gray: #928374;
 
-:root {
-  font-size: 25px;
-  color: purple;
-  font-family: Rokkitt;
-}
 
-body {
-  * {
-    box-sizing: border-box;
-  }
-  background-color: pink;
-}
-
-main {
-  margin-left: 5rem;
-  padding: 2rem;
-  min-height: 100vh;
-}
-
-body::-webkit-scrollbar {
-  width: 0.5rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: $gray;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: $gray;
-  background: $orange;
-}
 
 .pic {
   width: 12rem;
@@ -65,3 +35,4 @@ input {
   background: none;
   height: 2rem;
 }
+

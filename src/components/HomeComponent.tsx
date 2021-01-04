@@ -1,9 +1,12 @@
 import React from "react";
 import { Title } from "../styled-components/styled-components";
+import { UploadButton, Pics } from "./UploadComponent";
 export const HomeComponent = () => {
   return (
     <>
-      <Title>Chicha Swan C.</Title>
+      <Title>Category</Title>
+      <UploadButton />
+      <Pics />
     </>
   );
 };

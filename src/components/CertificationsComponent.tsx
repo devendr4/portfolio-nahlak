@@ -3,46 +3,37 @@ import { Certificate } from "../interfaces/interfaces";
 import useCollection from "../hooks/useCollection";
 import { Spinner } from "./SpinnerComponent";
 import { Title, FlexContainer } from "../styled-components/styled-components";
+import styled from "styled-components";
+
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(min-content, max-content);
+  gap: 1.5rem;
+  img {
+    object-fit: cover;
+  }
+`;
 
 export const Certifications = () => {
   const { isLoading, collection, error } = useCollection({
-    name: "certificates",
+    name: "automatic",
   });
-
   return (
     <FlexContainer>
       <Title>Certifications</Title>
       {isLoading && <Spinner />}
 
       {!isLoading && (
-        <div>
-          <h2>Machine Learning</h2>
+        <Grid>
           {collection.map((item, i) => {
-            if (item.category == "ml")
-              return (
-                <div key={i}>
-                  <div> {item.name} </div>
-                  <div> Credential ID: {item.credential} </div>
-                  <a href={item.url}>See credential</a>
-                </div>
-              );
+            return (
+              <a key={i} href={item.url}>
+                <img src={item.image} />
+              </a>
+            );
           })}
-        </div>
-      )}
-      {!isLoading && (
-        <div>
-          <h2>Front-end</h2>
-          {collection.map((item, i) => {
-            if (item.category == "frontend")
-              return (
-                <div key={i}>
-                  <div> {item.name} </div>
-                  <div> Credential ID: {item.credential} </div>
-                  <a href={item.url}>See credential</a>
-                </div>
-              );
-          })}
-        </div>
+        </Grid>
       )}
     </FlexContainer>
   );

@@ -1,14 +1,13 @@
 import firebase from "firebase/app";
 import "firebase/firestore";
-
 const firebaseConfig = {
-  apiKey: "AIzaSyAc1tAlLVOy35DPJcvql0abI5FO-G-2XN4",
-  authDomain: "devendr4.firebaseapp.com",
-  databaseURL: "https://devendr4.firebaseio.com",
-  projectId: "devendr4",
-  storageBucket: "devendr4.appspot.com",
-  messagingSenderId: "181897682852",
-  appId: "1:181897682852:web:b6cedd23bc04643f076b31",
+  apiKey: "AIzaSyCUjxum26_qlyKnNhphdcf4aK6RF8Uk5iQ",
+  authDomain: "chicha-29463.firebaseapp.com",
+  projectId: "chicha-29463",
+  storageBucket: "chicha-29463.appspot.com",
+  messagingSenderId: "6596465843",
+  appId: "1:6596465843:web:894f626339753c27544cc6",
+  measurementId: "G-5X824B8EW6",
 };
 
 export const fb = firebase.initializeApp(firebaseConfig);

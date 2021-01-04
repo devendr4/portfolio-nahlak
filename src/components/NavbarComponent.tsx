@@ -1,15 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import {
-  FaEnvelope,
-  FaHome,
-  FaMoon,
-  FaRegLightbulb,
-  FaGraduationCap,
-} from "react-icons/fa";
+import { FaEnvelope, FaHome, FaGraduationCap } from "react-icons/fa";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { TiThMenu } from "react-icons/ti";
 import { NavLink } from "react-router-dom";
 import "../component-styles/navbar-styles.scss";
+import { Title, Subtitle, Nav } from "../styled-components/navbar";
 
 export const useOutsideAlert = (
   ref: React.RefObject<HTMLDivElement>,
@@ -41,45 +36,35 @@ export const Navbar = () => {
           console.log(isOpen);
         }}
       />
-      <nav className={"navbar " + (isOpen ? "open" : "closed")}>
+      <Nav>
         <ul>
+          <Title>Chicha Swan C.</Title>
           <li>
             <NavLink to="/" exact>
-              <span className="link-text">Home</span>
               <FaHome />
+              <Subtitle>Home</Subtitle>
             </NavLink>
           </li>
           <li>
             <NavLink to="/about">
-              <span className="link-text">About Me</span>
               <BsPersonLinesFill />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/skills">
-              <span className="link-text">Skills</span>
-              <FaRegLightbulb />
+              <Subtitle>About Me</Subtitle>
             </NavLink>
           </li>
           <li>
             <NavLink to="/certifications">
-              <span className="link-text">Certifications</span>
               <FaGraduationCap />
+              <Subtitle>Certifications</Subtitle>
             </NavLink>
           </li>
           <li>
             <NavLink to="/contact">
-              <span className="link-text">Contact</span>
+              <Subtitle className="link-text">Contact</Subtitle>
               <FaEnvelope />
             </NavLink>
           </li>
-          <li>
-            <span>
-              <FaMoon />
-            </span>
-          </li>
         </ul>
-      </nav>
+      </Nav>
     </div>
   );
 };
