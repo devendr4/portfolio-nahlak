@@ -1,5 +1,5 @@
 import styled, { keyframes } from "styled-components";
-import { brightOrange, orange, gray, darkbg } from "./constants";
+import { inactive, active, blue, lightpink } from "./constants";
 
 type TabProps = {
   isActive: boolean;
@@ -15,7 +15,8 @@ export const TabGroup = styled.div`
 export const Tab = styled.div<TabProps>`
   cursor: pointer;
   transition: 800ms;
-  background-color: ${(props) => (props.isActive ? orange : darkbg)};
+  background-color: ${(props) => (props.isActive ? active : inactive)};
+  color: ${(props) => (props.isActive ? blue : lightpink)};
   margin-bottom: 2rem;
   font-size: 1.5em;
   min-width: 6rem;
@@ -23,7 +24,8 @@ export const Tab = styled.div<TabProps>`
   text-align: center;
   padding: 1rem;
   &:hover {
-    background-color: ${orange};
+    background-color: ${active};
+    color: ${inactive};
     filter: grayscale(0%);
   }
 `;
@@ -43,7 +45,6 @@ export const Circle = styled.div`
   width: 0.9rem;
   height: 0.9rem;
   border-radius: 50%;
-  background-color: ${brightOrange};
 `;
 
 type ProgressBarProps = {
@@ -75,7 +76,6 @@ export const ProgressBar = styled.div<ProgressBarProps>`
   border-radius: 10rem;
   justify-content: flex-end;
   align-items: center;
-  background-color: ${orange};
   width: ${(props) => props.width};
   animation: ${ProgressAnimation} 1.5s ease-out;
   &:before {
@@ -88,7 +88,6 @@ export const ProgressBar = styled.div<ProgressBarProps>`
 export const FullBar = styled.div`
   width: 100%;
   height: 0.5rem;
-  background-color: ${gray};
   border-radius: 10rem;
 `;
 

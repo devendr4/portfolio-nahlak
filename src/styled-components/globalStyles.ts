@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
-import { pink, lightpink, blue } from "./constants";
+import { pink, lightpink, blue, bg } from "./constants";
 
 const GlobalStyle = createGlobalStyle`
-  :root {
-    font-size: 25px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+ :root {
+    font-size: 22px;
     color: ${lightpink} ;
-    font-family: Rokkitt;
+    font-family: 'Montserrat';
   }
 
 
@@ -13,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     * {
       box-sizing: border-box;
     }
-    background-color: ${pink};
+    background-color: ${bg};
   }
 
 

@@ -42,25 +42,25 @@ export const Navbar = () => {
           <li>
             <NavLink to="/" exact>
               <FaHome />
-              <Subtitle>Home</Subtitle>
+              <Subtitle>home</Subtitle>
             </NavLink>
           </li>
           <li>
             <NavLink to="/about">
               <BsPersonLinesFill />
-              <Subtitle>About Me</Subtitle>
+              <Subtitle>about me</Subtitle>
             </NavLink>
           </li>
           <li>
             <NavLink to="/certifications">
               <FaGraduationCap />
-              <Subtitle>Certifications</Subtitle>
+              <Subtitle>certifications</Subtitle>
             </NavLink>
           </li>
           <li>
             <NavLink to="/contact">
-              <Subtitle className="link-text">Contact</Subtitle>
               <FaEnvelope />
+              <Subtitle>contact</Subtitle>
             </NavLink>
           </li>
         </ul>
