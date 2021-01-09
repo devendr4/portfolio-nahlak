@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { pink, lightpink, blue, bg } from "./constants";
+import { lightpink, blue, bg } from "./constants";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');

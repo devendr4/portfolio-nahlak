@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { fetchPhotos } from "../CloudinaryService";
-// @ts-ignore
-import { Image, Transformation } from "cloudinary-react";
 import { Grid } from "../styled-components/grid";
 import LazyImage from "./LazyImage";
 
@@ -13,7 +11,7 @@ export const PicList = ({ category, isActive }: Props) => {
   const [images, setImages] = useState<any[]>([]);
   useEffect(() => {
     fetchPhotos(category, setImages);
-  }, []);
+  }, [category]);
   if (isActive) {
     return (
       <Grid isActive={isActive}>

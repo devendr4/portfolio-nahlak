@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { Certificate } from "../interfaces/interfaces";
+import React from "react";
 import useCollection from "../hooks/useCollection";
 import { Spinner } from "./SpinnerComponent";
 import { Title, FlexContainer } from "../styled-components/styled-components";
@@ -18,7 +17,7 @@ const Grid = styled.div`
 `;
 
 export const Certifications = () => {
-  const { isLoading, collection, error } = useCollection({
+  const { isLoading, collection } = useCollection({
     name: "automatic",
   });
   return (
