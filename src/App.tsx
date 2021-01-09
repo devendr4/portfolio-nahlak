@@ -9,7 +9,7 @@ import { Switch, Route } from "react-router-dom";
 // @ts-ignore
 import { CloudinaryContext } from "cloudinary-react";
 import GlobalStyle from "./styled-components/globalStyles";
-
+import { UploadButton } from "./components/UploadComponent";
 function App() {
   return (
     <>
@@ -26,6 +26,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/upload233">
+              <UploadButton />
             </Route>
             <Route path="/">
               <HomeComponent />

@@ -4,6 +4,8 @@ import useCollection from "../hooks/useCollection";
 import { Spinner } from "./SpinnerComponent";
 import { Title, FlexContainer } from "../styled-components/styled-components";
 import styled from "styled-components";
+//@ts-ignore
+import { Image, Transformation } from "cloudinary-react";
 
 const Grid = styled.div`
   display: grid;
@@ -29,7 +31,13 @@ export const Certifications = () => {
           {collection.map((item, i) => {
             return (
               <a key={i} href={item.url}>
-                <img src={item.image} />
+                <Image src={item.image} alt={`certificate${i}`}>
+                  <Transformation
+                    fetch_format="auto"
+                    resource-type="image"
+                    flags="lossy"
+                  />
+                </Image>
               </a>
             );
           })}

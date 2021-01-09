@@ -13,4 +13,14 @@ export const FlexContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  .pic {
+    flex: 15%;
+    img {
+      border-radius: 50px;
+    }
+  }
+  .text {
+    padding: 2rem;
+    flex: 50%;
+  }
 `;

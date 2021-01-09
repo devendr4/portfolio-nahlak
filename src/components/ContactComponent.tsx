@@ -2,7 +2,7 @@ import React from "react";
 import { Title } from "../styled-components/styled-components";
 import { FaInstagram, FaEnvelope, FaFacebookSquare } from "react-icons/fa";
 import styled from "styled-components";
-import { active, lightpink, blue } from "../styled-components/constants";
+import { active, blue } from "../styled-components/constants";
 
 const ContactData = styled.div`
   font-size: 1.6em;
@@ -40,22 +40,38 @@ const ContactData = styled.div`
 export const Contact = () => {
   return (
     <>
-      <Title>Contactáctame</Title>
+      <Title>Contact Me</Title>
       <ContactData>
         <div className="internal-container">
           <span>
-            <a href="https://www.instagram.com/nahlakkk" target="_blank">
+            <a
+              href="https://www.instagram.com/nahlakkk"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaInstagram />
             </a>
-            <a href="https://www.instagram.com/nahlakkk" target="_blank">
+            <a
+              href="https://www.instagram.com/nahlakkk"
+              target="_blank"
+              rel="noreferrer"
+            >
               @nahlakkk
             </a>
           </span>
           <span>
-            <a href="mailto:sheilaswanni93@gmail.com" target="_blank">
+            <a
+              href="mailto:sheilaswanni93@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaEnvelope />
             </a>
-            <a href="mailto:sheilaswanni93@gmail.com" target="_blank">
+            <a
+              href="mailto:sheilaswanni93@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
               sheilaswanni93@gmail.com
             </a>
           </span>
@@ -63,12 +79,14 @@ export const Contact = () => {
             <a
               href="https://www.facebook.com/nahlakkk-106957844571975/"
               target="_blank"
+              rel="noreferrer"
             >
               <FaFacebookSquare />
             </a>
             <a
               href="https://www.facebook.com/nahlakkk-106957844571975/"
               target="_blank"
+              rel="noreferrer"
             >
               nahlakkk
             </a>

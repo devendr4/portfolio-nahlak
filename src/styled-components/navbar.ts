@@ -34,6 +34,7 @@ export const Nav = styled.nav`
         display: flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
         flex-wrap: wrap;
         transition: 300ms;
         svg {
