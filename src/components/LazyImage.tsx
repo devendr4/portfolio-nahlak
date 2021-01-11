@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Modal from "react-modal";
 import LazyLoad from "react-lazyload";
 //@ts-ignore
 import { Image, Transformation } from "cloudinary-react";
