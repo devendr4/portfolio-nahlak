@@ -1,4 +1,4 @@
-import { Title, FlexContainer } from "../styled-components/styled-components";
+import { Title, FlexContainer } from "../styles/general";
 //@ts-ignore
 import { Image, Transformation } from "cloudinary-react";
 
@@ -22,7 +22,6 @@ export const About = () => {
           />
         </Image>
       </section>
-
       <section className="text">
         <p>
           I'm Sheila S. Cruces (NAHLAK), psychology student, graphic designer

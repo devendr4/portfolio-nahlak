@@ -1,11 +1,11 @@
 import { createGlobalStyle } from "styled-components";
-import { lightpink, blue, bg } from "./constants";
+import { colors } from "./constants";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
  :root {
     font-size: 22px;
-    color: ${lightpink} ;
+    color: ${colors.lightpink} ;
     font-family: 'Montserrat';
   }
 
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     * {
       box-sizing: border-box;
     }
-    background-color: ${bg};
+    background-color: ${colors.bg};
   }
 
 
@@ -30,11 +30,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body::-webkit-scrollbar-track {
-    background: ${blue};
+    background: ${colors.blue};
   }
 
   body::-webkit-scrollbar-thumb {
-    background: ${lightpink};
+    background: ${colors.lightpink};
   }
 `;
 

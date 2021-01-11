@@ -57,6 +57,7 @@
   "devDependencies": {
     "@types/prop-types": "^15.7.3",
     "@types/react-lazyload": "^3.0.0",
+    "@types/react-modal": "^3.10.6",
     "@types/styled-components": "^5.1.7"
   }
 }

@@ -1,14 +1,13 @@
 import React from "react";
-import "./styles.scss";
 import { HomeComponent } from "./components/HomeComponent";
 import { Contact } from "./components/ContactComponent";
 import { Certifications } from "./components/CertificationsComponent";
 import { About } from "./components/AboutComponent";
-import { Navbar } from "./components/NavbarComponent";
+import { Navbar } from "./components/Navbar/NavbarComponent";
 import { Switch, Route } from "react-router-dom";
 // @ts-ignore
 import { CloudinaryContext } from "cloudinary-react";
-import GlobalStyle from "./styled-components/globalStyles";
+import GlobalStyle from "./styles/globalStyles";
 import { UploadButton } from "./components/UploadComponent";
 function App() {
   return (

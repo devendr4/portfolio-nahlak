@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { fetchPhotos } from "../CloudinaryService";
-import { Grid } from "../styled-components/grid";
+import { Grid } from "../styles/grid";
 import LazyImage from "./LazyImage";
 
 type Props = {
@@ -14,11 +14,13 @@ export const PicList = ({ category, isActive }: Props) => {
   }, [category]);
   if (isActive) {
     return (
-      <Grid isActive={isActive}>
-        {images.map((i) => {
-          return <LazyImage publicId={i} key={i} />;
-        })}
-      </Grid>
+      <>
+        <Grid isActive={isActive}>
+          {images.map((i) => {
+            return <LazyImage publicId={i} key={i} />;
+          })}
+        </Grid>
+      </>
     );
   } else {
     return <></>;
