@@ -15,6 +15,7 @@ export const TabGroup = styled.div`
 export const Tab = styled.div<TabProps>`
   cursor: pointer;
   transition: 800ms;
+  overflow-wrap: break-word;
   background-color: ${(props) =>
     props.isActive ? colors.active : colors.inactive};
   color: ${(props) => (props.isActive ? colors.blue : colors.lightpink)};
