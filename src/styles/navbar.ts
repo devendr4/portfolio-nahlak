@@ -64,7 +64,7 @@ export const NavItems = styled.ul`
     }
   }
 
-  @media (max-width: ${sizes.sm}) {
+  @media (max-width: ${sizes.md}) {
     flex-flow: column nowrap;
     justify-content: space-evenly;
     li {
