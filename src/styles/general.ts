@@ -25,6 +25,7 @@ export const FlexContainer = styled.div`
     img {
       border-radius: 50px;
       width: 100%;
+      height: 100%;
     }
   }
   .text {

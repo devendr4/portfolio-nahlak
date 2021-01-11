@@ -41,10 +41,13 @@ const ContactData = styled.div`
       margin: 0;
     }
   }
-  @media (max-width: ${sizes.sm}) {
+  @media screen and (max-width: ${sizes.sm}) {
     font-size: 1em;
     .internal-container {
       flex-direction: column;
+      span {
+        padding: 0;
+      }
     }
   }
   @media (max-width: ${sizes.xs}) {
