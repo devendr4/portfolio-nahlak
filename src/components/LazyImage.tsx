@@ -18,6 +18,7 @@ type Props = {
 };
 
 const LazyImage = ({ publicId }: Props) => {
+  //<Transformation overlay="marca-de-agua_ch3khv" opacity="60" />
   return (
     <LazyLoad>
       <Image publicId={publicId} width="100%" height="100%">

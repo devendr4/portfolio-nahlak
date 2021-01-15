@@ -9,6 +9,8 @@ import { Switch, Route } from "react-router-dom";
 import { CloudinaryContext } from "cloudinary-react";
 import GlobalStyle from "./styles/globalStyles";
 import { UploadButton } from "./components/UploadComponent";
+//import Particles from "react-tsparticles";
+import Particles from "react-particles-js";
 function App() {
   return (
     <>
@@ -16,6 +18,18 @@ function App() {
         <GlobalStyle />
         <Navbar></Navbar>
         <main>
+          <Particles
+            params={{
+              particles: {
+                line_linked: {
+                  shadow: {
+                    enable: true,
+                    color: "pink",
+                  },
+                },
+              },
+            }}
+          />
           <Switch>
             <Route path="/contact">
               <Contact />

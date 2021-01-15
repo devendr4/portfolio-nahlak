@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Title } from "../styles/general";
 import { PicList } from "./PictureListComponent";
 import { TabGroup, Tab } from "../styles/tabs";
+import Particles from "react-tsparticles";
+//import Particles from "react-particles-js";
 
 const types = ["logos", "ilustraciones", "productos", "art"];
 const englishTypes = ["logos", "illustrations", "products", "art"];
