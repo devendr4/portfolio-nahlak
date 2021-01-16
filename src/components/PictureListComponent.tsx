@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { fetchPhotos } from "../CloudinaryService";
-import { Grid } from "../styles/grid";
 import LazyImage from "./LazyImage";
+//@ts-ignore
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 type Props = {
   category: string;
@@ -14,13 +15,13 @@ export const PicList = ({ category, isActive }: Props) => {
   }, [category]);
   if (isActive) {
     return (
-      <>
-        <Grid isActive={isActive}>
+      <ResponsiveMasonry columnsCountBreakPoints={{ 450: 1, 650: 2, 1024: 3 }}>
+        <Masonry gutter={10}>
           {images.map((i) => {
             return <LazyImage publicId={i} key={i} />;
           })}
-        </Grid>
-      </>
+        </Masonry>
+      </ResponsiveMasonry>
     );
   } else {
     return <></>;

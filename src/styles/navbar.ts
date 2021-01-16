@@ -13,7 +13,7 @@ export const Nav = styled.nav<Props>`
   transition: 400ms ease;
   color: ${colors.blue};
   position: fixed;
-  z-index: 1;
+  z-index: 9999;
 
   @media (max-width: ${sizes.md}) {
     height: 100%;

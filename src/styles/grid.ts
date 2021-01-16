@@ -8,21 +8,15 @@ type Props = {
 };
 export const Grid = styled.div<Props>`
   display: ${(props) => (props.isActive ? "grid" : "none")};
-  @media screen and (min-width: ${sizes.lg}) {
-    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  }
-  @media screen and (max-width: ${sizes.sm}) {
-    grid-template-columns: 1fr;
-  }
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  grid-auto-rows: minmax(min-content, max-content);
-  gap: 1rem;
+  align-content: flex-start;
+  grid-auto-flow: dense;
+  gap: 0.5rem;
   img {
-    object-fit: cover;
-
+    display: block;
+    max-width: 100%;
     cursor: pointer;
     background-color: ${colors.primary};
-    height: 100%;
     /*&:hover {
       position: relative;
       transition: 200ms;
@@ -31,6 +25,24 @@ export const Grid = styled.div<Props>`
       width: 500px;
       z-index: 999;
     }*/
+  }
+
+  figure {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    margin-bottom: 10px;
+    break-inside: avoid;
+    img {
+      grid-row: 1/-1;
+      grid-column: 1;
+    }
+  }
+  @media screen and (min-width: ${sizes.lg}) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @media screen and (max-width: ${sizes.sm}) {
+    grid-template-columns: 1fr;
   }
 `;
 

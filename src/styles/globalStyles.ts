@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components";
-import { colors } from "./constants";
+import { colors, sizes } from "./constants";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
@@ -19,8 +19,7 @@ const GlobalStyle = createGlobalStyle`
 
 
   main {
-    padding: 4rem 2rem 4rem 2rem;
-
+    padding: 4rem 4rem 4rem 4rem;
     min-height: 100vh;
   }
 
@@ -35,6 +34,12 @@ const GlobalStyle = createGlobalStyle`
 
   body::-webkit-scrollbar-thumb {
     background: ${colors.lightpink};
+  }
+  @media (max-width:${sizes.md}){
+  main {
+    padding: 1rem 1rem 1rem 1rem;
+  }
+
   }
 `;
 

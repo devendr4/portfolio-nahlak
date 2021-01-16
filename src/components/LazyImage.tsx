@@ -1,4 +1,5 @@
 import LazyLoad from "react-lazyload";
+import { colors } from "../styles/constants";
 //@ts-ignore
 import { Image, Transformation } from "cloudinary-react";
 
@@ -23,8 +24,12 @@ const LazyImage = ({ publicId }: Props) => {
     <LazyLoad>
       <Image publicId={publicId} width="100%" height="100%">
         <Transformation fetch_format="auto" flags="lossy" />
-        <Transformation aspectRatio="4:3" crop="fill" />
-        <Transformation width="auto" dpr="auto" crop="scale" />
+        <Transformation
+          width="auto"
+          dpr="auto"
+          crop="scale"
+          background={colors.primary}
+        />
       </Image>
     </LazyLoad>
   );
