@@ -17,10 +17,8 @@
     "react-lazyload": "^3.1.0",
     "react-particles-js": "^3.4.1",
     "react-responsive-carousel": "^3.2.11",
-    "react-responsive-masonry": "^2.1.1",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
-    "react-tsparticles": "^1.18.11",
     "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
@@ -53,14 +51,15 @@
     "styled-components": "^5"
   },
   "devDependencies": {
-    "@types/prop-types": "^15.7.3",
-    "@types/react-lazyload": "^3.0.0",
-    "@types/react-modal": "^3.10.6",
-    "@types/styled-components": "^5.1.7",
+    "@types/jest": "^26.0.15",
     "@types/node": "^12.0.0",
+    "@types/prop-types": "^15.7.3",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/react-lazyload": "^3.0.0",
+    "@types/react-modal": "^3.10.6",
     "@types/react-router-dom": "^5.1.6",
-    "@types/jest": "^26.0.15"
+    "@types/styled-components": "^5.1.7",
+    "react-xmasonry": "^3.0.4"
   }
 }

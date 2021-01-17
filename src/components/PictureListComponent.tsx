@@ -1,13 +1,27 @@
 import React, { useState, useEffect } from "react";
 import { fetchPhotos } from "../CloudinaryService";
 import LazyImage from "./LazyImage";
-//@ts-ignore
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { XMasonry, XBlock } from "react-xmasonry";
+import styled, { keyframes } from "styled-components";
 
 type Props = {
   category: string;
   isActive: boolean;
 };
+
+const comeIn = keyframes`
+0% {transform: scale(0)}
+75% {transform: scale(1.03)}
+100% {transform: scale(1)}
+`;
+
+const PicDiv = styled.div`
+  .xmasonry .xblock {
+    animation: ${comeIn} ease 0.5s;
+    transition: left 0.3s ease, top 0.3s ease;
+  }
+`;
+
 export const PicList = ({ category, isActive }: Props) => {
   const [images, setImages] = useState<any[]>([]);
   useEffect(() => {
@@ -15,13 +29,17 @@ export const PicList = ({ category, isActive }: Props) => {
   }, [category]);
   if (isActive) {
     return (
-      <ResponsiveMasonry columnsCountBreakPoints={{ 450: 1, 650: 2, 1024: 3 }}>
-        <Masonry gutter={10}>
+      <PicDiv>
+        <XMasonry maxColumns={3} targetBlockWidth={450}>
           {images.map((i) => {
-            return <LazyImage publicId={i} key={i} />;
+            return (
+              <XBlock>
+                <LazyImage publicId={i} key={i} />
+              </XBlock>
+            );
           })}
-        </Masonry>
-      </ResponsiveMasonry>
+        </XMasonry>
+      </PicDiv>
     );
   } else {
     return <></>;

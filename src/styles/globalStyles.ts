@@ -19,7 +19,7 @@ const GlobalStyle = createGlobalStyle`
 
 
   main {
-    padding: 4rem 4rem 4rem 4rem;
+    padding: 4rem 2rem 2rem 2rem;
     min-height: 100vh;
   }
 
@@ -40,6 +40,16 @@ const GlobalStyle = createGlobalStyle`
     padding: 1rem 1rem 1rem 1rem;
   }
 
+  }
+  .xblock{
+    padding:8px;
+  }
+
+  .lazyload-wrapper{
+    img{
+
+    transition:all .5s ease;
+    }
   }
 `;
 
