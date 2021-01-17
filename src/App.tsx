@@ -22,7 +22,20 @@ function App() {
             params={{
               particles: {
                 number: {
-                  value: 100,
+                  value: 80,
+                  density: {
+                    enable: false,
+                  },
+                },
+                size: {
+                  value: 3,
+                  random: true,
+                  anim: {
+                    speed: 2,
+                  },
+                },
+                lineLinked: {
+                  enable: false,
                 },
               },
             }}
