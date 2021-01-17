@@ -10,7 +10,7 @@ import { CloudinaryContext } from "cloudinary-react";
 import GlobalStyle from "./styles/globalStyles";
 import { UploadButton } from "./components/UploadComponent";
 //import Particles from "react-tsparticles";
-import Particles from "react-particles-js";
+//import Particles from "react-particles-js";
 function App() {
   return (
     <>
@@ -18,11 +18,11 @@ function App() {
         <GlobalStyle />
         <Navbar></Navbar>
         <main>
-          <Particles
+          {/*<Particles
             params={{
               particles: {
                 number: {
-                  value: 80,
+                  value: 10,
                   density: {
                     enable: false,
                   },
@@ -39,7 +39,7 @@ function App() {
                 },
               },
             }}
-          />
+            />*/}
           <Switch>
             <Route path="/contact">
               <Contact />
