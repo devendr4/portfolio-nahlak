@@ -16,10 +16,10 @@ const comeIn = keyframes`
 `;
 
 const PicDiv = styled.div`
-  .xmasonry .xblock {
+  /*  .xmasonry .xblock {
     animation: ${comeIn} ease 0.5s;
     transition: left 0.3s ease, top 0.3s ease;
-  }
+}*/
 `;
 
 export const PicList = ({ category, isActive }: Props) => {
