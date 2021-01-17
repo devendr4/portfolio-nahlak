@@ -21,11 +21,8 @@ function App() {
           <Particles
             params={{
               particles: {
-                line_linked: {
-                  shadow: {
-                    enable: true,
-                    color: "pink",
-                  },
+                number: {
+                  value: 100,
                 },
               },
             }}

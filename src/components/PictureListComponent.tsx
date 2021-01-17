@@ -33,8 +33,8 @@ export const PicList = ({ category, isActive }: Props) => {
         <XMasonry maxColumns={3} targetBlockWidth={450}>
           {images.map((i) => {
             return (
-              <XBlock>
-                <LazyImage publicId={i} key={i} />
+              <XBlock key={i}>
+                <LazyImage publicId={i} />
               </XBlock>
             );
           })}
