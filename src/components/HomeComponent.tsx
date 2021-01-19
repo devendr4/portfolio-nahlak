@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Title } from "../styles/general";
 import { PicList } from "./PictureListComponent";
 import { TabGroup, Tab } from "../styles/tabs";
@@ -6,7 +6,6 @@ import { TabGroup, Tab } from "../styles/tabs";
 //import Particles from "react-particles-js";
 
 const types = ["logos", "ilustraciones", "productos", "art"];
-const englishTypes = ["logos", "illustrations", "products", "art"];
 export const HomeComponent = () => {
   const [active, setActive] = useState("logos");
   return (
@@ -20,7 +19,10 @@ export const HomeComponent = () => {
               onClick={() => setActive(data)}
               key={i}
             >
-              {data === "art" ? "all" : data}
+              {data === "art" ? "all" : ""}
+              {data === "ilustraciones" ? "illustrations" : ""}
+              {data === "productos" ? "products" : ""}
+              {data === "logos" ? "logos" : ""}
             </Tab>,
           ];
         })}
