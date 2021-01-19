@@ -2,7 +2,6 @@ import { createGlobalStyle } from "styled-components";
 import { colors, sizes } from "./constants";
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
  :root {
     font-size: 22px;
     color: ${colors.lightpink} ;
@@ -19,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
 
   main {
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 4rem 4rem 4rem;
     min-height: 100vh;
   }
 
@@ -41,14 +40,22 @@ const GlobalStyle = createGlobalStyle`
   }
 
   }
+
+
+  @media (min-width:${sizes.lg}){
+  main {
+    padding: 1rem 6rem 1rem 6rem;
+  }
+
+  }
   .xblock{
     padding:8px;
   }
 
   .lazyload-wrapper{
+    transition:all .5s ease;
     img{
 
-    transition:all .5s ease;
     }
   }
 `;
