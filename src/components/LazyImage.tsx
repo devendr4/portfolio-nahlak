@@ -1,7 +1,6 @@
-import LazyLoad from "react-lazyload";
 import { colors } from "../styles/constants";
 //@ts-ignore
-import { Image, Transformation } from "cloudinary-react";
+import { Image, Transformation, Placeholder } from "cloudinary-react";
 
 /*const loadingAnimation = keyframes`
   0%{
@@ -21,12 +20,16 @@ type Props = {
 const LazyImage = ({ publicId }: Props) => {
   //<Transformation overlay="marca-de-agua_ch3khv" opacity="60" />
   return (
-    <LazyLoad height={100}>
-      <Image publicId={publicId} width="100%" height="100%">
-        <Transformation fetch_format="auto" quality="auto" flags="lossy" />
-        <Transformation width="auto" dpr="auto" background={colors.primary} />
-      </Image>
-    </LazyLoad>
+    <Image publicId={publicId} width="100%" height="100%" loading="lazy">
+      <Transformation fetch_format="auto" quality="auto" flags="lossy" />
+      <Transformation
+        width="600"
+        crop="scale"
+        dpr="auto"
+        background={colors.primary}
+      />
+      <Placeholder type="pixelate" />
+    </Image>
   );
 };
 
