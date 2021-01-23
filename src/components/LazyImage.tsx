@@ -1,41 +1,37 @@
+import { useState } from "react";
 import { colors } from "../styles/constants";
 //@ts-ignore
 import { Image, Transformation, Placeholder } from "cloudinary-react";
 
-/*const loadingAnimation = keyframes`
-  0%{
-    background-color: #fff;
-  }
-  50% {
-    background-color: #ccc;
-  }
-  100% {
-    background-color: #fff; }
-`;
-*/
 type Props = {
   publicId: string;
 };
 
 const LazyImage = ({ publicId }: Props) => {
+  const [isLoaded, setLoaded] = useState(false);
   //<Transformation overlay="marca-de-agua_ch3khv" opacity="60" />
   return (
-    <Image
-      publicId={publicId}
-      width="100%"
-      height="100%"
-      loading="lazy"
-      alt={"img_" + publicId}
-    >
-      <Transformation fetch_format="auto" quality="auto" flags="lossy" />
-      <Transformation
-        width="600"
-        crop="limit"
-        dpr="auto"
-        background={colors.primary}
-      />
-      <Placeholder type="pixelate" />
-    </Image>
+    <>
+      <Image
+        publicId={publicId}
+        id="img"
+        width="100%"
+        height="100%"
+        loading="lazy"
+        alt={"img_" + publicId}
+        style={isLoaded ? {} : { opacity: 0 }}
+        onLoad={() => setLoaded(true)}
+      >
+        <Transformation fetch_format="auto" quality="auto" flags="lossy" />
+        <Transformation
+          width="600"
+          crop="limit"
+          dpr="auto"
+          background={colors.primary}
+        />
+        <Placeholder type="pixelate" />
+      </Image>
+    </>
   );
 };
 

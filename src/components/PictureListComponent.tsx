@@ -68,7 +68,7 @@ const PicList = ({ category }: Props) => {
         <Masonry gutter={"10px"}>
           {images.map((i) => {
             return [
-              <Suspense fallback={SpinnerComponent()}>
+              <Suspense fallback={SpinnerComponent}>
                 <LazyImage key={i} publicId={i} />
               </Suspense>,
             ];
