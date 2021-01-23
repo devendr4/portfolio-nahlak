@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Suspense, lazy } from "react";
 import { Title } from "../styles/general";
-import { PicList } from "./PictureListComponent";
 import { TabGroup, Tab } from "../styles/tabs";
-//import Particles from "react-tsparticles";
+import SpinnerComponent from "./SpinnerComponent";
 //import Particles from "react-particles-js";
-
+const PicList = lazy(() => import("./PictureListComponent"));
 const types = ["logos", "ilustraciones", "productos", "art"];
 export const HomeComponent = () => {
   const [active, setActive] = useState("logos");
@@ -27,7 +26,10 @@ export const HomeComponent = () => {
           ];
         })}
       </TabGroup>
-      <PicList category={active} />
+
+      <Suspense fallback={SpinnerComponent}>
+        <PicList category={active} />
+      </Suspense>
     </>
   );
 };

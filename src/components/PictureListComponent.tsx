@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 //import { fetchPhotos, CloudinaryPic } from "../CloudinaryService";
 import { fetchPhotos } from "../CloudinaryService";
-import LazyImage from "./LazyImage";
 //@ts-ignore
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import styled from "styled-components";
 
+import SpinnerComponent from "./SpinnerComponent";
+const LazyImage = lazy(() => import("./LazyImage"));
 type Props = {
   category: string;
 };
@@ -41,7 +42,7 @@ const getData = async () => {
   });
 };
  */
-export const PicList = ({ category }: Props) => {
+const PicList = ({ category }: Props) => {
   /*
   const [images, setImages] = useState<CloudinaryPic[]>([]);
   const [isLoading, setLoading] = useState(true);
@@ -66,10 +67,15 @@ export const PicList = ({ category }: Props) => {
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 1024: 3 }}>
         <Masonry gutter={"10px"}>
           {images.map((i) => {
-            return <LazyImage key={i} publicId={i} />;
+            return [
+              <Suspense fallback={SpinnerComponent()}>
+                <LazyImage key={i} publicId={i} />
+              </Suspense>,
+            ];
           })}
         </Masonry>
       </ResponsiveMasonry>
     </PicDiv>
   );
 };
+export default PicList;

@@ -44,3 +44,5 @@ export const Spinner = styled.div`
     left: 1.5em;
   }
 `;
+const SpinnerComponent = () => <Spinner />;
+export default SpinnerComponent;
