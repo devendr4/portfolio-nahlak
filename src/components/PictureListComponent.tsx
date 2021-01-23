@@ -4,17 +4,11 @@ import { fetchPhotos } from "../CloudinaryService";
 import LazyImage from "./LazyImage";
 //@ts-ignore
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 
 type Props = {
   category: string;
 };
-
-const comeIn = keyframes`
-0% {transform: scale(0)}
-75% {transform: scale(1.03)}
-100% {transform: scale(1)}
-`;
 
 const PicDiv = styled.div`
   img {
