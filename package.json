@@ -59,7 +59,6 @@
     "@types/react-lazyload": "^3.0.0",
     "@types/react-modal": "^3.10.6",
     "@types/react-router-dom": "^5.1.6",
-    "@types/styled-components": "^5.1.7",
-    "react-xmasonry": "^3.0.4"
+    "@types/styled-components": "^5.1.7"
   }
 }

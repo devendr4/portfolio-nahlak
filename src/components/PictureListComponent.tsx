@@ -17,12 +17,11 @@ const comeIn = keyframes`
 `;
 
 const PicDiv = styled.div`
-  .xmasonry .xblock {
-    /*    animation: ${comeIn} ease 0.5s;*/
-    transition: left 0.3s ease, top 0.3s ease;
+  img {
+    color: transparent;
   }
-  .lazyload-wrapper {
-    transition: left 0.3s ease, top 0.3s ease;
+  img[alt]:after {
+    display: none;
   }
 `;
 
