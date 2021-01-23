@@ -19,7 +19,7 @@ const Grid = styled.div`
   }
 `;
 
-export const Certifications = () => {
+const CertificationsComponent = () => {
   const { isLoading, collection } = useCollection({
     name: "automatic",
   });
@@ -48,3 +48,4 @@ export const Certifications = () => {
     </>
   );
 };
+export default CertificationsComponent;

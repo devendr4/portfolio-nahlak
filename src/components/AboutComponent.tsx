@@ -2,7 +2,7 @@ import { Title, FlexContainer } from "../styles/general";
 //@ts-ignore
 import { Image, Transformation } from "cloudinary-react";
 
-export const About = () => {
+const AboutComponent = () => {
   /* const spanishText = [
     "Soy Sheila S. Cruces (Nahlak), estudiante de psicología mención clínica dinámica, diseñador gráfico y artista. Actualmente me dedico al diseño y el arte utilizando diversos conocimientos en psicología para realizar proyectos artísticos personalizados",
     "Considero el diseño como una manera de expresión plástica que refleja cualidades y contextos particualres que al extrapolarlos a un nivel conductual en las personas, puedan reflejar el inconsciente u otras formas de actividad ",
@@ -37,3 +37,4 @@ export const About = () => {
     </FlexContainer>
   );
 };
+export default AboutComponent;

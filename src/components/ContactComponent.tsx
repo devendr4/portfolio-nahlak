@@ -55,7 +55,7 @@ const ContactData = styled.div`
   }
 `;
 
-export const Contact = () => {
+const ContactComponent = () => {
   return (
     <>
       <Title>Contact Me</Title>
@@ -114,3 +114,4 @@ export const Contact = () => {
     </>
   );
 };
+export default ContactComponent;

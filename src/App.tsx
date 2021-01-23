@@ -1,16 +1,18 @@
-import React from "react";
-import { HomeComponent } from "./components/HomeComponent";
-import { Contact } from "./components/ContactComponent";
-import { Certifications } from "./components/CertificationsComponent";
-import { About } from "./components/AboutComponent";
+import React, { Suspense, lazy } from "react";
 import { Navbar } from "./components/Navbar/NavbarComponent";
 import { Switch, Route } from "react-router-dom";
 // @ts-ignore
 import { CloudinaryContext } from "cloudinary-react";
 import GlobalStyle from "./styles/globalStyles";
 import { UploadButton } from "./components/UploadComponent";
-//import Particles from "react-tsparticles";
+import SpinnerComponent from "./components/SpinnerComponent";
 //import Particles from "react-particles-js";
+const HomeComponent = lazy(() => import("./components/HomeComponent"));
+const ContactComponent = lazy(() => import("./components/ContactComponent"));
+const CertificationsComponent = lazy(
+  () => import("./components/CertificationsComponent")
+);
+const AboutComponent = lazy(() => import("./components/AboutComponent"));
 function App() {
   return (
     <>
@@ -42,19 +44,27 @@ function App() {
             />*/}
           <Switch>
             <Route path="/contact">
-              <Contact />
+              <Suspense fallback={SpinnerComponent}>
+                <ContactComponent />
+              </Suspense>
             </Route>
             <Route path="/certifications">
-              <Certifications />
+              <Suspense fallback={SpinnerComponent}>
+                <CertificationsComponent />
+              </Suspense>
             </Route>
             <Route path="/about">
-              <About />
+              <Suspense fallback={SpinnerComponent}>
+                <AboutComponent />
+              </Suspense>
             </Route>
             <Route path="/upload233">
               <UploadButton />
             </Route>
             <Route path="/">
-              <HomeComponent />
+              <Suspense fallback={SpinnerComponent}>
+                <HomeComponent />
+              </Suspense>
             </Route>
           </Switch>
         </main>

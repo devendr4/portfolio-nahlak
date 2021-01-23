@@ -5,7 +5,7 @@ import SpinnerComponent from "./SpinnerComponent";
 //import Particles from "react-particles-js";
 const PicList = lazy(() => import("./PictureListComponent"));
 const types = ["logos", "ilustraciones", "productos", "art"];
-export const HomeComponent = () => {
+const HomeComponent = () => {
   const [active, setActive] = useState("logos");
   return (
     <>
@@ -33,3 +33,4 @@ export const HomeComponent = () => {
     </>
   );
 };
+export default HomeComponent;
