@@ -4,6 +4,7 @@ import { fetchPhotos } from "../CloudinaryService";
 //@ts-ignore
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import styled from "styled-components";
+import Modal from "./Modal";
 
 import SpinnerComponent from "./SpinnerComponent";
 const LazyImage = lazy(() => import("./LazyImage"));
@@ -59,17 +60,29 @@ const PicList = ({ category }: Props) => {
     console.log(images);
     }, [category]);*/
   const [images, setImages] = useState<any[]>([]);
+  const [selectedImage, setSelectedImage] = useState("");
   useEffect(() => {
     fetchPhotos(category, setImages);
   }, [category]);
   return (
     <PicDiv>
+      <Modal
+        imageId={selectedImage}
+        isOpen={!!selectedImage}
+        toggle={() => setSelectedImage("")}
+      ></Modal>
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 750: 2, 1024: 3 }}>
         <Masonry gutter={"10px"}>
           {images.map((i) => {
             return [
               <Suspense fallback={SpinnerComponent}>
-                <LazyImage key={i} publicId={i} />
+                <LazyImage
+                  key={i}
+                  publicId={i}
+                  onClick={() => {
+                    setSelectedImage(i);
+                  }}
+                />
               </Suspense>,
             ];
           })}

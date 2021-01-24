@@ -5,9 +5,10 @@ import { Image, Transformation, Placeholder } from "cloudinary-react";
 
 type Props = {
   publicId: string;
+  onClick?: () => void;
 };
 
-const LazyImage = ({ publicId }: Props) => {
+const LazyImage = ({ publicId, onClick }: Props) => {
   const [isLoaded, setLoaded] = useState(false);
   //<Transformation overlay="marca-de-agua_ch3khv" opacity="60" />
   return (
@@ -21,6 +22,7 @@ const LazyImage = ({ publicId }: Props) => {
         alt={"img_" + publicId}
         style={isLoaded ? {} : { opacity: 0 }}
         onLoad={() => setLoaded(true)}
+        onClick={onClick}
       >
         <Transformation fetch_format="auto" quality="auto" flags="lossy" />
         <Transformation
