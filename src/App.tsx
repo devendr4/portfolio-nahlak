@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import { CloudinaryContext } from "cloudinary-react";
 import GlobalStyle from "./styles/globalStyles";
 import { UploadButton } from "./components/UploadComponent";
+//import { TransitionGroup, CSSTransition } from "react-transition-group";
 import SpinnerComponent from "./components/SpinnerComponent";
 //import Particles from "react-particles-js";
 const HomeComponent = lazy(() => import("./components/HomeComponent"));
