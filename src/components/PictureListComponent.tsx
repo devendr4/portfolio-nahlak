@@ -15,6 +15,7 @@ type Props = {
 const PicDiv = styled.div`
   img {
     color: transparent;
+    cursor: pointer;
   }
   img[alt]:after {
     display: none;

@@ -10,7 +10,6 @@ type Props = {
 
 const LazyImage = ({ publicId, onClick }: Props) => {
   const [isLoaded, setLoaded] = useState(false);
-  //<Transformation overlay="marca-de-agua_ch3khv" opacity="60" />
   return (
     <>
       <Image

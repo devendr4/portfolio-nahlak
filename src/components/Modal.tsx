@@ -11,7 +11,6 @@ const Modal = styled(motion.div)`
   z-index: 9999;
   overflow:hidden;
   img {
-    
     margin: 0 auto;
     max-width: 100%;
     max-height: 80vh;
@@ -24,6 +23,7 @@ const Modal = styled(motion.div)`
     height: 2rem;
     background-color: rgba(0, 0, 0, 0.3);
     color: white;
+    
     border: 0;
     transition:2ms all ease;
     &:active,
@@ -91,6 +91,14 @@ const ModalComponent: React.FC<Props> = (props) => {
                 crop="limit"
                 dpr="auto"
                 background={colors.primary}
+              />
+
+              <Transformation
+                overlay="marca-de-agua_ch3khv"
+                opacity="60"
+                width="1.0"
+                height="1.0"
+                flags="relative"
               />
               <Placeholder type="pixelate" />
             </Image>
