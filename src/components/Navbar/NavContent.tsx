@@ -8,7 +8,7 @@ export const NavContent = () => {
   return (
     <NavItems>
       <li className="title">
-        <img src="/banner.png" />
+        <img src="/banner.png" alt="banner" />
       </li>
       <li>
         <NavLink to="/" exact>
