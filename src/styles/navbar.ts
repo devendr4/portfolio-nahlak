@@ -1,17 +1,15 @@
 import styled from "styled-components";
 import { colors, sizes } from "./constants";
-
 export const Nav = styled.nav<Props>`
   .title {
     flex: 25%;
     text-align: center;
   }
   width: 100vw;
-  height: 3rem;
+  height: 4rem;
   background-color: ${colors.primary};
   font-size: 1.5em;
   transition: 400ms ease;
-  color: ${colors.blue};
   position: fixed;
   z-index: 999;
 
@@ -40,8 +38,12 @@ export const NavItems = styled.ul`
   justify-content: flex-end;
   li {
     position: relative;
+    img {
+      max-width: 100%;
+      max-height: 4rem;
+    }
     a {
-      color: ${colors.blue};
+      color: ${colors.font};
       padding: 1.5rem;
       text-decoration: none;
       display: flex;

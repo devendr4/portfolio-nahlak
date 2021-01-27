@@ -17,8 +17,7 @@ export const Tab = styled.div<TabProps>`
   transition: 800ms;
   overflow-wrap: break-word;
   background-color: ${(props) =>
-    props.isActive ? colors.active : colors.inactive};
-  color: ${(props) => (props.isActive ? colors.blue : colors.lightpink)};
+    props.isActive ? colors.secondary : colors.darkprimary};
   margin-bottom: 2rem;
   font-size: 1.5em;
   min-width: 6rem;
@@ -26,8 +25,7 @@ export const Tab = styled.div<TabProps>`
   text-align: center;
   padding: 1rem;
   &:hover {
-    background-color: ${colors.active};
-    color: ${colors.inactive};
+    background-color: ${colors.secondary};
     filter: grayscale(0%);
   }
 `;

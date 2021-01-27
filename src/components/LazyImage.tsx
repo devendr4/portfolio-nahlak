@@ -28,7 +28,7 @@ const LazyImage = ({ publicId, onClick }: Props) => {
           width="600"
           crop="limit"
           dpr="auto"
-          background={colors.primary}
+          background={colors.imgbg}
         />
         <Placeholder type="pixelate" />
       </Image>

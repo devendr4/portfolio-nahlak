@@ -90,7 +90,7 @@ const ModalComponent: React.FC<Props> = (props) => {
               <Transformation
                 crop="limit"
                 dpr="auto"
-                background={colors.primary}
+                background={colors.imgbg}
               />
 
               <Transformation

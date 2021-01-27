@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { sizes } from "../../styles/constants";
+import { sizes, colors } from "../../styles/constants";
 
 type Props = {
   isOpen: boolean;
@@ -21,7 +21,7 @@ export const StyledBurger = styled.div<Props>`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: green;
+    background-color: ${colors.secondary};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;

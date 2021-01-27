@@ -4,7 +4,7 @@ import { colors, sizes } from "./constants";
 const GlobalStyle = createGlobalStyle`
  :root {
     font-size: 22px;
-    color: ${colors.lightpink} ;
+    color: ${colors.font} ;
     font-family: 'Montserrat';
   }
 
@@ -18,7 +18,7 @@ const GlobalStyle = createGlobalStyle`
 
 
   main {
-    padding: 4rem 4rem 4rem 4rem;
+    padding: 5rem 4rem 4rem 4rem;
     min-height: 100vh;
   }
 
@@ -28,11 +28,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body::-webkit-scrollbar-track {
-    background: ${colors.blue};
+    background: ${colors.secondary};
   }
 
   body::-webkit-scrollbar-thumb {
-    background: ${colors.lightpink};
+    background: ${colors.darkprimary};
   }
   @media (max-width:${sizes.md}){
   main {
@@ -43,9 +43,6 @@ const GlobalStyle = createGlobalStyle`
 
 
   @media (min-width:${sizes.lg}){
-  main {
-    padding: 1rem 6rem 1rem 6rem;
-  }
 
   }
   .xblock{

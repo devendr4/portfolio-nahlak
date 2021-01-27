@@ -1,11 +1,10 @@
 export const colors = {
-  pink: "#F2828D",
-  lightpink: "#FED7DA ",
-  blue: "#014468",
-  bg: "#000000",
-  active: "#fcde55",
-  primary: "#E885B4",
-  inactive: "#1B3160",
+  font: "#e0e0e0",
+  bg: "#272727",
+  primary: "#ef0606",
+  darkprimary: "#9b0000",
+  secondary: "#798b72",
+  imgbg: "#a8a8a8",
 };
 
 export const sizes = {

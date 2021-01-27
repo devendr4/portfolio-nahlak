@@ -14,7 +14,7 @@ const ContactData = styled.div`
     align-items: center;
     display: flex;
     box-shadow: 6px 6px 6px black;
-    background-color: ${colors.active};
+    background-color: ${colors.secondary};
     justify-content: space-around;
     padding: 2rem;
     width: 70vw;
@@ -32,7 +32,7 @@ const ContactData = styled.div`
       text-decoration: none;
       display: flex;
       justify-content: center;
-      color: ${colors.blue};
+      color: ${colors.font};
       text-align: center;
       word-wrap: anywhere;
       overflow-wrap: anywhere;
