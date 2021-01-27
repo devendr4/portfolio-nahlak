@@ -6,7 +6,7 @@ export const Nav = styled.nav<Props>`
     text-align: center;
   }
   width: 100vw;
-  height: 4rem;
+  height: 3rem;
   background-color: ${colors.primary};
   font-size: 1.5em;
   transition: 400ms ease;
@@ -40,11 +40,12 @@ export const NavItems = styled.ul`
     position: relative;
     img {
       max-width: 100%;
-      max-height: 4rem;
+      max-height: 3rem;
     }
     a {
       color: ${colors.font};
-      padding: 1.5rem;
+      padding: 1rem;
+      font-size: 0.85em;
       text-decoration: none;
       display: flex;
       align-items: center;
