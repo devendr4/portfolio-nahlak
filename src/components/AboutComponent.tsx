@@ -14,6 +14,8 @@ const AboutComponent = () => {
         <Image
           src="https://res.cloudinary.com/chichaswan/image/upload/v1610074733/20190205_141720_zbtvxz.jpg"
           alt="profilepic"
+          height="auto"
+          width="60%"
         >
           <Transformation
             fetch_format="auto"
@@ -24,9 +26,9 @@ const AboutComponent = () => {
       </section>
       <section className="text">
         <p>
-          I'm Sheila S. Cruces (NAHLAK), psychology student, graphic designer
-          and artist. I design and make art using of my psychology knowledge to
-          make all kinds of personalized artistic projects.
+          I'm Sheila S. Cruces , psychology student, graphic designer and
+          artist. I design and make art using of my psychology knowledge to make
+          all kinds of personalized artistic projects.
         </p>
         <p>
           I think design is an expresion which reflects particular qualities and

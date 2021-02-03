@@ -19,13 +19,9 @@ export const FlexContainer = styled.div`
   justify-content: space-around;
   .pic {
     display: flex;
-    flex-grow: 0;
     justify-content: center;
-    padding: 2rem;
     img {
-      border-radius: 50px;
-      width: 100%;
-      height: 100%;
+      border-radius: 20px;
     }
   }
   .text {

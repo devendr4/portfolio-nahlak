@@ -8,7 +8,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Montserrat';
   }
 
-
   body {
     * {
       box-sizing: border-box;
@@ -41,6 +40,9 @@ const GlobalStyle = createGlobalStyle`
 
   }
 
+  canvas{
+    position:fixed;
+  }
 
   @media (min-width:${sizes.lg}){
 
