@@ -79,18 +79,18 @@ const ContactComponent = () => {
           </span>
           <span>
             <a
-              href="mailto:sheilaswanni93@gmail.com"
+              href="mailto:nahlakdesign@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
               <FaEnvelope />
             </a>
             <a
-              href="mailto:sheilaswanni93@gmail.com"
+              href="mailto:nahlakdesign@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              sheilaswanni93@gmail.com
+              nahlakdesign@gmail.com
             </a>
           </span>
           <span>
