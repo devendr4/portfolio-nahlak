@@ -14,8 +14,8 @@ const AboutComponent = () => {
         <Image
           src="https://res.cloudinary.com/chichaswan/image/upload/v1610074733/20190205_141720_zbtvxz.jpg"
           alt="profilepic"
-          height="auto"
-          width="280px"
+          height="100%"
+          width="60%"
         >
           <Transformation
             fetch_format="auto"
