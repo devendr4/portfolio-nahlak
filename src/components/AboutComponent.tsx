@@ -15,7 +15,7 @@ const AboutComponent = () => {
           src="https://res.cloudinary.com/chichaswan/image/upload/v1610074733/20190205_141720_zbtvxz.jpg"
           alt="profilepic"
           height="auto"
-          width="60%"
+          width="280px"
         >
           <Transformation
             fetch_format="auto"
